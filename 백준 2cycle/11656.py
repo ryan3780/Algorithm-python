@@ -2,10 +2,10 @@ import sys
 input = sys.stdin.readline
  
 words = input().rstrip()
-prefix = []
+suffix = []
 
 for i in range(len(words)):
-    prefix.append(words[i:])
+    suffix.append(words[i:])
 
-for i in sorted(prefix):
+for i in sorted(suffix):
     print(i)
