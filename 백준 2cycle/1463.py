@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
 
-# 이런 식으로도 가능하다 
+# 이런 식으로도 가능하다 // 다른 사람 코드
 a = int(input())
 count = 0
 minimum=[a]
@@ -26,5 +26,5 @@ while True:
     if min(minimum) == 1:
         print(count)
         break
-
-    
+        
+#https://doorbw.tistory.com/57
