@@ -6,8 +6,8 @@ def solution(new_id):
         if i.isalpha() or i.isdigit() or i in ['-', '_', '.']:
             ans += i
 
-    ans = ans.replace('...', '.')
-    ans = ans.replace('..', '.')
+    while '..' in ans:
+        ans = ans.replace('..', '.')
 
     if len(ans) != 0 and ans[0] == '.':
         ans = ans[1:]
