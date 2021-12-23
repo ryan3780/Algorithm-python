@@ -19,7 +19,7 @@ def bfs(x,y):
     queue.append((x,y))
     check[x][y] = 1
 
-    while queue:
+    while queue:                    # O(N)
         x,y = queue.popleft()
 
         if x == n - 1 and y == m -1:
