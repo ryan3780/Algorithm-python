@@ -1,17 +1,17 @@
-from collections import deque
+import heapq
 
 def solution(scoville, K):
     answer = 0
     k = K
-    scv = deque(sorted(scoville))
-    cnt = 0
+    heapq.heapify(scoville)
     
-    while scv[0] < k:
+    while scoville[0] < k:
         
-        mix = scv.popleft() + (scv.popleft() * 2)
-        scv.appendleft(mix)
-        sorted(scv)
-        print(scv)
-        cnt += 1
+        mix = heapq.heappop(scoville) + (heapq.heappop(scoville) * 2)
+        heapq.heappush(scoville, mix)
+        answer += 1
+        
+        if len(scoville) == 1 and scoville[0] < k :
+            return -1 
                 
     return answer
