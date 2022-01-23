@@ -21,3 +21,5 @@ def solution(progresses, speeds):
 
     answer.append(count)
     return answer
+
+solution([93, 30, 55], [1, 30, 5])
